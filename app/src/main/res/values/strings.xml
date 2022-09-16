@@ -2,4 +2,5 @@
     <string name="app_name">HelloWorld2</string>
     <string name="welcome_on_the_board">Welcome on the board</string>
     <string name="welcome">Welcome</string>
+    <string name="enter_your_name">Enter your name</string>
 </resources>

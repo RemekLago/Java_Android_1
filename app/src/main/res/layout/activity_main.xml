@@ -24,4 +24,24 @@
         tools:layout_editor_absoluteX="-26dp"
         tools:layout_editor_absoluteY="122dp" />
 
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_your_name"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="-73dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

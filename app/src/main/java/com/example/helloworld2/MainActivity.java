@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         textView1.setBackgroundColor(Color.GREEN);
 
         TextView textView2 = findViewById(R.id.text2);
+
+        EditText edit1 = findViewById(R.id.edit1);
+        EditText edit2 = findViewById(R.id.edit2);
 
     }
 }
