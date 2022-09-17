@@ -2,10 +2,12 @@ package com.example.appentername;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
         EditText edit1 = findViewById(R.id.nameEditText);
         Button button1 = findViewById(R.id.buttonClick);
+        ImageView image1 = findViewById(R.id.imageView);
+
+        image1.setImageResource(R.drawable.dragon);
 
 
 
