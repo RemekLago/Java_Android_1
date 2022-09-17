@@ -16,3 +16,4 @@ rootProject.name = "HelloWorld2"
 include ':app'
 include ':hellowworld3'
 include ':appentername'
+include ':appchangekilogramtopounds'
