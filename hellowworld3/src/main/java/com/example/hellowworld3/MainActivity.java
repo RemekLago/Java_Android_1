@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,11 +31,22 @@ public class MainActivity extends AppCompatActivity {
         button2.setTextColor(Color.RED);
 
 
-
         // Getting Input from EditText
         String name = edit1.getText().toString();
         String phone = edit2.getText().toString();
         String password = edit3.getText().toString();
 
+        // Event Handling
+        // method 1
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "You CLICKED ME", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    // method 2, in activity_main.xml
+    public void SayHello(View view) {
+        Toast.makeText(getApplicationContext(), "Hello my button2", Toast.LENGTH_SHORT).show();
     }
 }
