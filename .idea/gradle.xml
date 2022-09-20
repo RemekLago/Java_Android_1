@@ -10,11 +10,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Linear_Layout" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/appchangekilogramtopounds" />
             <option value="$PROJECT_DIR$/appentername" />
+            <option value="$PROJECT_DIR$/constraint_layout" />
             <option value="$PROJECT_DIR$/hellowworld3" />
+            <option value="$PROJECT_DIR$/linear_layout" />
             <option value="$PROJECT_DIR$/relative_layout" />
           </set>
         </option>

@@ -1,4 +1,4 @@
-package com.example.layouts;
+package com.example.constraint_layout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
