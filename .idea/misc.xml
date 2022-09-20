@@ -9,6 +9,8 @@
         <entry key="appentername/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="constraint_layout/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="grid_layout/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="grid_layout/two_activities/src/main/res/layout/activity_main.xml" value="0.23550724637681159" />
+        <entry key="grid_layout/two_activities/src/main/res/layout/activity_main2.xml" value="0.23550724637681159" />
         <entry key="hellowworld3/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2085" />
         <entry key="hellowworld3/src/main/res/layout/activity_main.xml" value="0.17" />
         <entry key="linear_layout/src/main/res/layout/activity_main.xml" value="0.1125" />
