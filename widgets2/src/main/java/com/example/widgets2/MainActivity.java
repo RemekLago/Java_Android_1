@@ -27,25 +27,18 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButton3 = findViewById(R.id.radioButton3);
         ToggleButton toggleButton1 = findViewById(R.id.toggleButton1);
 
-//        toggleButton1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-//                if (isChecked) {}
-//
-//        }
+       toggleButton1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+           @Override
+           public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+               if (isChecked) {
+                   Toast.makeText(getApplicationContext(), "ToggleButton is Enabled", Toast.LENGTH_LONG).show();
+               } else {
+                   Toast.makeText(getApplicationContext(), "ToggleButton is Disabled", Toast.LENGTH_LONG).show();
+               }
+           }
+       } );
     }
 
-    public void onCheckedChanged(View view) {
-        boolean checked = ((ToggleButton) view).isChecked();
-        switch (view.getId()) {
-            case R.id.toggleButton1:
-                if (checked)
-                    Toast.makeText(this, "ToggleButton is Enabled", Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(this, "ToggleButton is Disabled", Toast.LENGTH_LONG).show();
-                break;
-        }
-    }
 
     public void onCheckboxClicked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
