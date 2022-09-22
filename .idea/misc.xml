@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="Linear_Layout/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/app_spanish_teacher/src/main/res/drawable/ic_launcher_background.xml" value="0.1075" />
+        <entry key="app/app_spanish_teacher/src/main/res/layout/activity_main.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="appchangekilogramtopounds/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="appentername/src/main/res/layout/activity_main.xml" value="0.22" />
