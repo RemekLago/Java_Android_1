@@ -26,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
                 "Android 12"
         };
         // 3. Adapter - ArrayAdapter
+//        ArrayAdapter adapter = new ArrayAdapter<String>(
+//                this, android.R.layout.simple_list_item_1, androidVersions);
+//
+//        listView.setAdapter(adapter);
+
         ArrayAdapter adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, androidVersions);
+                this, R.layout.myitem, R.id.itemText, androidVersions);
 
         listView.setAdapter(adapter);
 
