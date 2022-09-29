@@ -4,6 +4,7 @@ public class Contact {
 
     public static final String TABLE_NAME = "contacts";
     public static final String COLUMN_ID = "contact_id";
+    public static final String COLUMN_NAME = "contact_name";
     public static final String COLUMN_EMAIL = "contact_email";
 
 
@@ -14,6 +15,15 @@ public class Contact {
     private Contact() {
 
     }
+
+    // SQL Query
+    public static final String CREATE_TABLE =
+            "CREATE TABLE" + TABLE_NAME + "("
+                    + COLUMN_ID + "INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_NAME + "TEXT,"
+                    + COLUMN_EMAIL + "DATETIME DEFAULT CURRENT_TIMESTAMP"
+                    + ")";
+
 
     public Contact(String name, String email, String id) {
         this.name = name;
