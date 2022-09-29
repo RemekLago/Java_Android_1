@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="HelloWorld2.adapter_listview" target="17" />
+      <module name="HelloWorld2.adapter_listview2" target="17" />
+      <module name="HelloWorld2.app" target="17" />
+      <module name="HelloWorld2.app.app_spanish_teacher" target="17" />
+      <module name="HelloWorld2.appchangekilogramtopounds" target="17" />
+      <module name="HelloWorld2.appentername" target="17" />
+      <module name="HelloWorld2.appnamehello" target="17" />
+      <module name="HelloWorld2.constraint_layout" target="17" />
+      <module name="HelloWorld2.database_storage" target="17" />
+      <module name="HelloWorld2.grid_layout" target="17" />
+      <module name="HelloWorld2.grid_layout.two_activities" target="17" />
+      <module name="HelloWorld2.hellowworld3" target="17" />
+      <module name="HelloWorld2.linear_layout" target="17" />
+      <module name="HelloWorld2.menu" target="17" />
+      <module name="HelloWorld2.recyclerview" target="17" />
+      <module name="HelloWorld2.relative_layout" target="17" />
+      <module name="HelloWorld2.widgets2" target="17" />
+      <module name="HelloWorld2.widgets3" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

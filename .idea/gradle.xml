@@ -8,7 +8,7 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="Embedded JDK" />
+        <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -20,11 +20,13 @@
             <option value="$PROJECT_DIR$/appentername" />
             <option value="$PROJECT_DIR$/appnamehello" />
             <option value="$PROJECT_DIR$/constraint_layout" />
+            <option value="$PROJECT_DIR$/database_storage" />
             <option value="$PROJECT_DIR$/grid_layout" />
             <option value="$PROJECT_DIR$/grid_layout/two_activities" />
             <option value="$PROJECT_DIR$/hellowworld3" />
             <option value="$PROJECT_DIR$/linear_layout" />
             <option value="$PROJECT_DIR$/menu" />
+            <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/relative_layout" />
             <option value="$PROJECT_DIR$/widgets2" />
             <option value="$PROJECT_DIR$/widgets3" />
