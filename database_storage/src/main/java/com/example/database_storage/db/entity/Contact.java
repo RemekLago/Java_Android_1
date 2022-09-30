@@ -10,7 +10,7 @@ public class Contact {
 
     private String name;
     private String email;
-    private String id;
+    private int id;
 
     private Contact() {
 
@@ -25,7 +25,7 @@ public class Contact {
                     + ")";
 
 
-    public Contact(String name, String email, String id) {
+    public Contact(String name, String email, int id) {
         this.name = name;
         this.email = email;
         this.id = id;
@@ -47,11 +47,11 @@ public class Contact {
         this.email = email;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 }
