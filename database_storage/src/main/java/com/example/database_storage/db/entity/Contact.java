@@ -12,7 +12,7 @@ public class Contact {
     private String email;
     private int id;
 
-    private Contact() {
+    public Contact() {
 
     }
 

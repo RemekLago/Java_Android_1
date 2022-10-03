@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.database_storage.db.entity.Contact;
 
 import java.lang.invoke.ConstantCallSite;
+import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -72,7 +73,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Getting all Contacts(data)
+    public ArrayList<Contact> getAllContacts() {
 
+        ArrayList<Contact> contacts = new ArrayList<>();
+
+        String selectQuery = "SELECT * FROM " + Contact.TABLE_NAME + " ORDER BY " +
+                Contact.COLUMN_ID + "DESC";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()){
+            do {
+                Contact contact = new Contact();
+                contact.setId(cursor.getInt(cursor.getColumnIndex(Contact.COLUMN_ID)));
+                contact.setName(cursor.getString(cursor.getColumnIndex(Contact.COLUMN_NAME)));
+                contact.setEmail(cursor.getString(cursor.getColumnIndex(Contact.COLUMN_EMAIL)));
+
+                contacts.add(contact);
+            } while (cursor.moveToNext());
+        }
+
+        db.close();
+
+    }
 
 
 }
