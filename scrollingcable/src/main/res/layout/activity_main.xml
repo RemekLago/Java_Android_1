@@ -6,99 +6,202 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/iloscMetryReszta_textView"
+        android:layout_width="186dp"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="ilość km:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <TextView
+        android:id="@+id/lokalizacjaReszta_textView"
+        android:layout_width="186dp"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Lokalizacja"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/numer_konfekcji_reszta_input"
+        android:layout_width="181dp"
+        android:layout_height="34dp"
+        android:gravity="center_vertical"
+        android:hint="..."
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <TextView
+        android:id="@+id/przewijanieNaKonfekcje_textView"
+        android:layout_width="183dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="Przewijanie na nową konfekcję:"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/LiniaKP_textView"
+        tools:layout_editor_absoluteX="16dp" />
+
     <EditText
         android:id="@+id/mertyKoniec_editText"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="..."
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintTop_toBottomOf="@+id/koniecMetry_textView"
+        tools:layout_editor_absoluteX="145dp" />
 
     <EditText
         android:id="@+id/mertyIlosc_editText"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="..."
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintTop_toBottomOf="@+id/iloscMetry_textView"
+        tools:layout_editor_absoluteX="276dp" />
 
     <TextView
         android:id="@+id/zlecenie_textview"
         android:layout_width="181dp"
         android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Zlecenie"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/przywieszka_textview"
         android:layout_width="180dp"
         android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Przywieszka"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="15dp" />
+        app:layout_constraintStart_toEndOf="@+id/zlecenie_textview"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/PrzewijanieNaKonfekcje_textView"
+        android:id="@+id/resztaNaKonfekcji_textView"
         android:layout_width="183dp"
         android:layout_height="34dp"
         android:gravity="center_vertical"
-        android:text="Przewijanie na nową konfekcję:"
+        android:text="Reszta na konfekcję:"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="155dp" />
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="312dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/numer_konfekcji_input"
         android:layout_width="181dp"
         android:layout_height="34dp"
+        android:layout_marginStart="16dp"
         android:gravity="center_vertical"
         android:hint="podaj numer nowej konfekcji"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="215dp"
+        app:layout_constraintStart_toEndOf="@+id/przewijanieNaKonfekcje_textView"
         tools:layout_editor_absoluteY="155dp" />
 
     <TextView
         android:id="@+id/startMetry_textView"
         android:layout_width="120dp"
         android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:background="#EDECEC"
         android:gravity="center_horizontal|center_vertical"
         android:text="Metry Start:"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="196dp" />
+        app:layout_constraintTop_toBottomOf="@+id/przewijanieNaKonfekcje_textView"
+        tools:layout_editor_absoluteX="17dp" />
 
     <TextView
         android:id="@+id/koniecMetry_textView"
         android:layout_width="120dp"
         android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:background="#EDECEC"
         android:gravity="center_horizontal|center_vertical"
         android:text="Metry koniec"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="196dp" />
+        app:layout_constraintTop_toBottomOf="@+id/numer_konfekcji_input"
+        tools:layout_editor_absoluteX="145dp" />
 
     <TextView
         android:id="@+id/iloscMetry_textView"
         android:layout_width="120dp"
         android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:background="#EDECEC"
         android:gravity="center_horizontal|center_vertical"
         android:text="Ilość km"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="196dp" />
+        app:layout_constraintTop_toBottomOf="@+id/numer_konfekcji_input"
+        tools:layout_editor_absoluteX="276dp" />
 
     <EditText
         android:id="@+id/mertyStart_editText"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="..."
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintTop_toBottomOf="@+id/startMetry_textView"
+        tools:layout_editor_absoluteX="17dp" />
+
+    <EditText
+        android:id="@+id/zlecenie__editText"
+        android:layout_width="181dp"
+        android:layout_height="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="..."
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/zlecenie_textview"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/przywieszka_editText"
+        android:layout_width="183dp"
+        android:layout_height="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="..."
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/przywieszka_textview"
+        tools:layout_editor_absoluteX="213dp" />
+
+    <TextView
+        android:id="@+id/zapas_textView"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="#EDECEC"
+        android:text="Zapas:"
+        app:layout_constraintTop_toBottomOf="@+id/lokalizacja_textView"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/lokalizacja_textView"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:background="#EDECEC"
+        android:text="Lokalizacja:"
+        app:layout_constraintTop_toBottomOf="@+id/zlecenie__editText"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/LiniaKP_textView"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="#EDECEC"
+        android:text="Linia/KP"
+        app:layout_constraintTop_toBottomOf="@+id/zapas_textView"
+        tools:layout_editor_absoluteX="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
