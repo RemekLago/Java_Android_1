@@ -18,6 +18,7 @@
       <module name="HelloWorld2.menu" target="17" />
       <module name="HelloWorld2.recyclerview" target="17" />
       <module name="HelloWorld2.relative_layout" target="17" />
+      <module name="HelloWorld2.scrollingcable" target="17" />
       <module name="HelloWorld2.widgets2" target="17" />
       <module name="HelloWorld2.widgets3" target="17" />
     </bytecodeTargetLevel>
