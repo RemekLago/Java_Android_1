@@ -45,8 +45,8 @@ public class MainActivity extends Activity {
             stringBuilder.append(ilosc + "\n");
         }
 
-        TextView textView = (TextView) findViewById(R.id.textView1);
-        textView.setText(stringBuilder);
+        TextView list_textView = (TextView) findViewById(R.id.listWithCables_textView);
+       list_textView.setText(stringBuilder);
 
     }
 
@@ -56,7 +56,8 @@ public class MainActivity extends Activity {
                 new String[]{DataBaseColumns._ID,
                         DataBaseColumns.KONFEKCJA,
                         DataBaseColumns.KONFEKCJA_LOKALIZACJA,
-                        DataBaseColumns.KONFEKCJA_ILOSC_METROW}, null, null, null, null, DataBaseColumns._ID);
+                        DataBaseColumns.KONFEKCJA_ILOSC_METROW},
+                null, null, null, null, DataBaseColumns._ID);
 //        startManagingCursor(cursor);
         return cursor;
     }
