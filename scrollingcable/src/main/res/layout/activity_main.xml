@@ -4,79 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/iloscMetryReszta_textView"
-        android:layout_width="186dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="ilość km:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resztaNaKonfekcji_textView" />
-
-    <TextView
-        android:id="@+id/lokalizacjaReszta_textView"
-        android:layout_width="186dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Lokalizacja"
-        app:layout_constraintStart_toEndOf="@+id/iloscMetryReszta_textView"
-        app:layout_constraintTop_toBottomOf="@+id/numer_konfekcji_reszta_input" />
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="119dp">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/numer_konfekcji_reszta_input"
+        android:id="@+id/lokalizacja_input"
         android:layout_width="181dp"
         android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:gravity="center_vertical"
-        android:hint="..."
+        android:hint="podaj lokalizację"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/resztaNaKonfekcji_textView"
-        app:layout_constraintTop_toBottomOf="@+id/mertyStart_editText4" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ilosc_metrow_input" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ilosc_metrow_input"
+        android:layout_width="181dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:hint="podaj ilość metrów"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numer_konfekcji_input" />
 
     <TextView
         android:id="@+id/przewijanieNaKonfekcje_textView"
-        android:layout_width="183dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="380dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:gravity="center_vertical"
         android:text="Przewijanie na nową konfekcję:"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LiniaKP_textView" />
-
-    <EditText
-        android:id="@+id/mertyKoniec_editText"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="..."
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/mertyStart_editText4"
-        app:layout_constraintTop_toBottomOf="@+id/koniecMetry_textView" />
-
-    <EditText
-        android:id="@+id/mertyIlosc_editText"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="..."
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/mertyKoniec_editText"
-        app:layout_constraintTop_toBottomOf="@+id/iloscMetry_textView" />
 
     <TextView
         android:id="@+id/zlecenie_textview"
@@ -98,107 +64,20 @@
         app:layout_constraintStart_toEndOf="@+id/zlecenie_textview"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/resztaNaKonfekcji_textView"
-        android:layout_width="183dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center_vertical"
-        android:text="Reszta na konfekcję:"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mertyStart_editText4" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/numer_konfekcji_input"
         android:layout_width="181dp"
         android:layout_height="34dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_vertical"
         android:hint="podaj numer nowej konfekcji"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/przewijanieNaKonfekcje_textView"
-        app:layout_constraintTop_toBottomOf="@+id/przywieszka_editText" />
-
-    <TextView
-        android:id="@+id/startMetry_textView"
-        android:layout_width="120dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:background="#EDECEC"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Metry Start:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/przewijanieNaKonfekcje_textView" />
 
-    <TextView
-        android:id="@+id/koniecMetry_textView"
-        android:layout_width="120dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:background="#EDECEC"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Metry koniec"
-        app:layout_constraintStart_toEndOf="@+id/startMetry_textView"
-        app:layout_constraintTop_toBottomOf="@+id/numer_konfekcji_input" />
-
-    <TextView
-        android:id="@+id/iloscMetry_textView"
-        android:layout_width="120dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:background="#EDECEC"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Ilość km"
-        app:layout_constraintStart_toEndOf="@+id/koniecMetry_textView"
-        app:layout_constraintTop_toBottomOf="@+id/numer_konfekcji_input" />
-
     <EditText
-        android:id="@+id/mertyStart_editText4"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="..."
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startMetry_textView" />
-
-    <EditText
-        android:id="@+id/mertyStart_editText"
-        android:layout_width="186dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="..."
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iloscMetryReszta_textView" />
-
-    <EditText
-        android:id="@+id/mertyStart_editText5"
-        android:layout_width="186dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="..."
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/mertyStart_editText"
-        app:layout_constraintTop_toBottomOf="@+id/lokalizacjaReszta_textView" />
-
-    <EditText
-        android:id="@+id/zlecenie__editText"
+        android:id="@+id/zlecenie_editText"
         android:layout_width="181dp"
         android:layout_height="29dp"
         android:layout_marginStart="16dp"
@@ -213,13 +92,14 @@
         android:id="@+id/przywieszka_editText"
         android:layout_width="183dp"
         android:layout_height="29dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="..."
         android:inputType="textPersonName"
         android:text="..."
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@+id/przywieszka_textview"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintStart_toEndOf="@+id/zlecenie_editText"
+        app:layout_constraintTop_toBottomOf="@+id/przywieszka_textview" />
 
     <TextView
         android:id="@+id/zapas_textView"
@@ -235,12 +115,13 @@
         android:id="@+id/lokalizacja_textView"
         android:layout_width="100dp"
         android:layout_height="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:background="#EDECEC"
         android:text="Lokalizacja:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zlecenie__editText" />
+        app:layout_constraintTop_toBottomOf="@+id/zlecenie_editText" />
 
     <TextView
         android:id="@+id/LiniaKP_textView"
@@ -251,4 +132,14 @@
         android:text="Linia/KP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zapas_textView" />
+
+    <Button
+        android:id="@+id/zatwierdz_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="36dp"
+        android:text="ZATWIERDZ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lokalizacja_input" />
 </androidx.constraintlayout.widget.ConstraintLayout>
