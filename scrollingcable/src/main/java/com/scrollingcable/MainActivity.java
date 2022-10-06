@@ -5,6 +5,8 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.TextView;
+
 import com.scrollingcable.db.DataBaseCable;
 import com.scrollingcable.db.DataBaseColumns;
 
@@ -29,6 +31,23 @@ public class MainActivity extends Activity {
     }
 
     private void showKonfekcja(Cursor cursor) {
+        StringBuilder stringBuilder = new StringBuilder("Kable na stanie: \n");
+
+        while (cursor.moveToNext()){
+            long id = cursor.getLong(0);
+            String konfekcja = cursor.getString(1);
+            String lokalizacja = cursor.getString(2);
+            int ilosc = cursor.getInt(3);
+
+            stringBuilder.append(id + ":");
+            stringBuilder.append(konfekcja + ":");
+            stringBuilder.append(lokalizacja + ":");
+            stringBuilder.append(ilosc + "\n");
+        }
+
+        TextView textView = (TextView) findViewById(R.id.textView1);
+        textView.setText(stringBuilder);
+
     }
 
     private Cursor takeKonfekcja() {
