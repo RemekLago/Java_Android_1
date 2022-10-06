@@ -32,6 +32,14 @@ public class MainActivity extends Activity {
     }
 
     private Cursor takeKonfekcja() {
+        SQLiteDatabase database = dataBaseCable.getReadableDatabase();
+        Cursor cursor = database.query(DataBaseColumns.TABLE_NAME,
+                new String[]{DataBaseColumns._ID,
+                        DataBaseColumns.KONFEKCJA,
+                        DataBaseColumns.KONFEKCJA_LOKALIZACJA,
+                        DataBaseColumns.KONFEKCJA_ILOSC_METROW}, null, null, null, null, DataBaseColumns._ID);
+//        startManagingCursor(cursor);
+        return cursor;
     }
 
     private void addKonfekcja(String konfekcja, String lokalizacja, int ilosc) {
