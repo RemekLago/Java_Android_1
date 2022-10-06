@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         dataBaseCable = new DataBaseCable(this);
 
         try{
-            addKonfekcja("Konfekcja1", "Magazyn1", 500 );
+            addKonfekcja("Konfekcja3", "Magazyn3", 700 );
             Cursor cursor = takeKonfekcja();
             showKonfekcja(cursor);
         } finally{
@@ -39,14 +39,14 @@ public class MainActivity extends Activity {
             String lokalizacja = cursor.getString(2);
             int ilosc = cursor.getInt(3);
 
-            stringBuilder.append(id + ":");
-            stringBuilder.append(konfekcja + ":");
-            stringBuilder.append(lokalizacja + ":");
+            stringBuilder.append(id + ", ");
+            stringBuilder.append(konfekcja + ", ");
+            stringBuilder.append(lokalizacja + ", ");
             stringBuilder.append(ilosc + "\n");
         }
 
         TextView list_textView = (TextView) findViewById(R.id.listWithCables_textView);
-       list_textView.setText(stringBuilder);
+        list_textView.setText(stringBuilder);
 
     }
 
@@ -66,8 +66,8 @@ public class MainActivity extends Activity {
         SQLiteDatabase database = dataBaseCable.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(DataBaseColumns.KONFEKCJA, konfekcja);
-        values.put(DataBaseColumns.KONFEKCJA_LOKALIZACJA, konfekcja);
-        values.put(DataBaseColumns.KONFEKCJA_ILOSC_METROW, konfekcja);
+        values.put(DataBaseColumns.KONFEKCJA_LOKALIZACJA, lokalizacja);
+        values.put(DataBaseColumns.KONFEKCJA_ILOSC_METROW, ilosc);
         database.insertOrThrow(DataBaseColumns.TABLE_NAME, null, values);
     }
 }
