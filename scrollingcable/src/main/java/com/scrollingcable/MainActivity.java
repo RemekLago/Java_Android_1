@@ -2,9 +2,11 @@ package com.scrollingcable;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.scrollingcable.db.DataBaseCable;
@@ -45,7 +47,7 @@ public class MainActivity extends Activity {
             stringBuilder.append(ilosc + "\n");
         }
 
-        TextView list_textView = (TextView) findViewById(R.id.listWithCables_textView);
+        TextView list_textView = (TextView) findViewById(R.id.listWithCables_textView2);
         list_textView.setText(stringBuilder);
 
     }
@@ -69,5 +71,9 @@ public class MainActivity extends Activity {
         values.put(DataBaseColumns.KONFEKCJA_LOKALIZACJA, lokalizacja);
         values.put(DataBaseColumns.KONFEKCJA_ILOSC_METROW, ilosc);
         database.insertOrThrow(DataBaseColumns.TABLE_NAME, null, values);
+    }
+
+    public void pokazlistekabli(View view) {
+        Intent intent = new Intent();
     }
 }
