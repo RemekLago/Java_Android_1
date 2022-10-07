@@ -5,17 +5,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
-public class DataBaseCable extends SQLiteOpenHelper {
+public class DataCable extends SQLiteOpenHelper {
     private static final String DATA_BASE_NAME = "dataBaseCable.db";
     private static final int DATA_BASE_VERSION = 1;
 
 
-    public DataBaseCable(Context context, String name,
+    public DataCable(Context context, String name,
                          SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATA_BASE_NAME, null, DATA_BASE_VERSION);
     }
 
-    public DataBaseCable(Context context) {
+    public DataCable(Context context) {
         super(context, DATA_BASE_NAME, null, DATA_BASE_VERSION);
     }
 

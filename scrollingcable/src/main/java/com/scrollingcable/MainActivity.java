@@ -7,21 +7,34 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-import com.scrollingcable.db.DataBaseCable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.scrollingcable.db.DataBaseColumns;
+import com.scrollingcable.db.DataCable;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
-    private DataBaseCable dataBaseCable;
+    private DataCable dataBaseCable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dataBaseCable = new DataBaseCable(this);
+        dataBaseCable = new DataCable(this);
+        Button pokaz_Button = findViewById(R.id.pokaz_button);
+
+//        pokaz_Button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, Cable_list.class);
+//                startActivity(intent);
+//            }
+//        });
 
         try{
             addKonfekcja("Konfekcja3", "Magazyn3", 700 );
@@ -47,7 +60,7 @@ public class MainActivity extends Activity {
             stringBuilder.append(ilosc + "\n");
         }
 
-        TextView list_textView = (TextView) findViewById(R.id.listWithCables_textView2);
+        TextView list_textView = (TextView) findViewById(R.id.textView);
         list_textView.setText(stringBuilder);
 
     }
@@ -73,7 +86,8 @@ public class MainActivity extends Activity {
         database.insertOrThrow(DataBaseColumns.TABLE_NAME, null, values);
     }
 
-    public void pokazlistekabli(View view) {
-        Intent intent = new Intent();
+    public void click(View view) {
+        Intent intent = new Intent(MainActivity.this, Cable_list.class);
+        startActivity(intent);
     }
 }
