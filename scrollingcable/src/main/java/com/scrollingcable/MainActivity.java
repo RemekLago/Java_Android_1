@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity {
         dataBaseCable = new DataCable(this);
         Button pokaz_Button = findViewById(R.id.pokaz_button);
 
-//        pokaz_Button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, Cable_list.class);
-//                startActivity(intent);
-//            }
-//        });
+        pokaz_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CableList.class);
+                startActivity(intent);
+            }
+        });
 
         try{
             addKonfekcja("Konfekcja3", "Magazyn3", 700 );
@@ -86,8 +86,4 @@ public class MainActivity extends AppCompatActivity {
         database.insertOrThrow(DataBaseColumns.TABLE_NAME, null, values);
     }
 
-    public void click(View view) {
-        Intent intent = new Intent(MainActivity.this, Cable_list.class);
-        startActivity(intent);
-    }
 }

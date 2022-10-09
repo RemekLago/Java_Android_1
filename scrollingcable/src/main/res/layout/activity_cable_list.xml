@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cable_list">
+    tools:context=".CableList">
 
-    <TextView
-        android:id="@+id/listWithCables_textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Cable list"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="228dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
