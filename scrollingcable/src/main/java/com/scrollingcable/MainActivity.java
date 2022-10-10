@@ -28,11 +28,13 @@ public class MainActivity extends AppCompatActivity {
         dataBaseCable = new DataCable(this);
         Button pokaz_Button = findViewById(R.id.pokaz_button);
 
+
         pokaz_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CableList.class);
-//                intent.putExtra("listcables",StringBuilder);
+                StringBuilder nexttext = showKonfekcja(takeKonfekcja());
+                intent.putExtra("listcables", (CharSequence) nexttext);
                 startActivity(intent);
             }
         });
@@ -44,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
         } finally{
             dataBaseCable.close();
         }
+
+
     }
 
-    private void showKonfekcja(Cursor cursor) {
+    private StringBuilder showKonfekcja(Cursor cursor) {
         StringBuilder stringBuilder = new StringBuilder("Kable na stanie: \n");
 
         while (cursor.moveToNext()){
@@ -61,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
             stringBuilder.append(ilosc + "\n");
         }
 
-        TextView list_textView = (TextView) findViewById(R.id.textView);
-        list_textView.setText(stringBuilder);
-
+        return stringBuilder;
     }
 
     private Cursor takeKonfekcja() {
