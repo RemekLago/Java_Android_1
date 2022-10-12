@@ -16,6 +16,7 @@
       <module name="HelloWorld2.hellowworld3" target="17" />
       <module name="HelloWorld2.linear_layout" target="17" />
       <module name="HelloWorld2.menu" target="17" />
+      <module name="HelloWorld2.project_v1" target="17" />
       <module name="HelloWorld2.recyclerview" target="17" />
       <module name="HelloWorld2.relative_layout" target="17" />
       <module name="HelloWorld2.scrollingcable" target="17" />
